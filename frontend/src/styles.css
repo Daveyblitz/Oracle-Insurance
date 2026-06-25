@@ -1,0 +1,176 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #18202f;
+  background: #eef2f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    linear-gradient(135deg, rgba(24, 32, 47, 0.94), rgba(27, 87, 91, 0.82)),
+    url("https://images.unsplash.com/photo-1642052502780-8ee67e3f3010?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.wallet-panel {
+  width: min(100%, 520px);
+  display: grid;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 70px rgba(9, 17, 28, 0.28);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #1b575b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.summary {
+  margin: 16px 0 0;
+  color: #465366;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.connection-box {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #f8faf9;
+}
+
+.status-label {
+  color: #5b6778;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.connection-box strong {
+  overflow-wrap: anywhere;
+  font-size: 1.1rem;
+}
+
+.connection-box p {
+  margin: 0;
+  color: #5b6778;
+}
+
+.connect-button {
+  min-height: 52px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #cf5f2b;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.connect-button:hover:not(:disabled) {
+  background: #b44f22;
+  transform: translateY(-1px);
+}
+
+.connect-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.contract-panel {
+  display: grid;
+  gap: 14px;
+  padding-top: 4px;
+}
+
+.contract-panel label {
+  color: #263343;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.contract-panel input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #b9c6ca;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #18202f;
+  background: #ffffff;
+  font: inherit;
+}
+
+.contract-panel input:focus {
+  border-color: #1b575b;
+  outline: 3px solid rgba(27, 87, 91, 0.16);
+}
+
+.secondary-button {
+  min-height: 48px;
+  border: 1px solid #1b575b;
+  border-radius: 8px;
+  color: #1b575b;
+  background: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: #eef7f6;
+}
+
+.secondary-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 18px;
+  }
+
+  .wallet-panel {
+    padding: 24px;
+  }
+}
